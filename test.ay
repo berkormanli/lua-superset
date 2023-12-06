@@ -1,0 +1,8 @@
+local zort = 5
+
+class Test {
+    arg1 = 1,
+    arg2 = 5,
+    str1 = "zattirzortzort",
+    str2 = "str"
+}

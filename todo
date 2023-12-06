@@ -1,0 +1,1 @@
+- Kısmi parser kodla. Lexer'dan çıkan sonuca göre Lua'nın kendisinde olmayan logicleri, statementları ya da kod bloklarını tanımlamayı sağla.
