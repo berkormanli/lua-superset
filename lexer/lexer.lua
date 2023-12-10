@@ -47,7 +47,7 @@ local keywords = {
 	structure = lookupify({
 		'and', 'break', 'do', 'else', 'elseif', 'end', 'for', 'function',
 		'goto', 'if', 'in', 'local', 'not', 'or', 'repeat', 'return', 'then',
-		'until', 'while', 'class'
+		'until', 'while', 'class', 'const'
 	}),
 
 	values = lookupify({
