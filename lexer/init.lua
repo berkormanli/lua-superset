@@ -1,4 +1,4 @@
-local Class = require("class")
+--[[local Class = require("class")
 local Pos = require("./classes/pos")
 local Array = require("./classes/array")
 local Token = require("./classes/token")
@@ -32,7 +32,7 @@ Lexer = Class()
 --[[
     Lexer
 ]]
-
+--[[
 function Lexer:__init(code, types)
     self.code = code
     self.types = types
@@ -74,13 +74,11 @@ function Lexer:createTokens()
     end
 
     return tokens
-end
+end]]
 
-local f = assert(io.open("test.ay", "r"))
+local f = assert(io.open("./test.ay", "r"))
 
 local fileContent = f:read("*all")
-
---print(fileContent)
 
 --createTokens(fileContent)
 
@@ -89,4 +87,10 @@ local json = require('json')
 
 local listOfLex = lex(fileContent)
 
-print(json.encode(listOfLex, {indent = 1}))
+local jsonOutput = io.open("output2.json", "w+")
+io.output(jsonOutput)
+local str = json.encode(listOfLex)
+local errmsg = io.write(str)
+local bool = io.close(jsonOutput)
+
+print(errmsg, bool)

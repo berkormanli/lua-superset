@@ -47,9 +47,11 @@ local keywords = {
 	structure = lookupify({
 		'and', 'break', 'do', 'else', 'elseif', 'end', 'for', 'function',
 		'goto', 'if', 'in', 'local', 'not', 'or', 'repeat', 'return', 'then',
-		'until', 'while', 'class', 'const'
+		'until', 'while'
 	}),
-
+	newSctructure = lookupify({
+		'class', 'const', 'switch', 'case', 'default'
+	}),
 	values = lookupify({
 		'true', 'false', 'nil'
 	})
@@ -294,6 +296,8 @@ return function(text)
 
 			if keywords.structure[word] then
 				pushToken('keyword')
+			elseif keywords.newSctructure[word] then
+				pushToken('exkeyword')
 			elseif keywords.values[word] then
 				pushToken('value')
 			else

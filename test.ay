@@ -6,3 +6,14 @@ class Test {
     str1 = "zattirzortzort",
     str2 = "str"
 }
+
+switch zort:
+    case 1:
+        print("tirt")
+    case 2:
+        print("zattirizort")
+    case 5:
+        print("yes")
+    default:
+        print("default")
+
